@@ -10,7 +10,7 @@ class AboutActivity : AppCompatActivity() {
         setContentView(R.layout.activity_about)
         val imgCall:ImageView = findViewById(R.id.imageViewCall)
         imgCall.setOnClickListener{
-            val callIntent:Intent
+            //val callIntent:Intent
         }
     }
 }

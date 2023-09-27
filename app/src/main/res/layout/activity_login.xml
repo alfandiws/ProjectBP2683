@@ -9,23 +9,22 @@
     android:background="#FE7E07">
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="180dp"
-        android:layout_height="232dp"
-        app:srcCompat="@drawable/read"
-        android:layout_gravity="center"
-        android:layout_marginTop="60dp"/>
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/read" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Login"
+        android:text="LOGIN"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp" />
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
 
     <EditText
         android:id="@+id/editTextUsername"
@@ -33,13 +32,13 @@
         android:layout_height="50dp"
         android:ems="10"
         android:inputType="text"
-        android:text="username"
-        android:textAlignment="viewStart"
-        android:textColor="#FFFFFF"
+        android:text="Username"
+        android:textColor="@color/white"
         android:backgroundTint="@color/white"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"/>
+        android:textSize="16sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -47,33 +46,36 @@
         android:layout_height="50dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:text="********"
-        android:textAlignment="viewStart"
-        android:textColor="#FFFFFF"
+        android:text="Password"
+        android:textColor="@color/white"
         android:backgroundTint="@color/white"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"/>
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
 
     <Button
         android:id="@+id/buttonLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:text="Login"
         android:backgroundTint="@color/white"
         android:textColor="#FE7E07"
-        android:text="Login"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"/>
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"/>
 
     <TextView
         android:id="@+id/textViewRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="Don't Have an account. Register here"
+        android:text="Don't have an account? Register here"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textAlignment="center" />
+        android:layout_marginTop="10dp"/>
 
 
 </LinearLayout>
