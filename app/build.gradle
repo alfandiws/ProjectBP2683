@@ -4,6 +4,9 @@ plugins {
 }
 
 android {
+    buildFeatures{
+        viewBinding=true
+    }
     namespace 'com.example.projectbp2683'
     compileSdk 33
 
