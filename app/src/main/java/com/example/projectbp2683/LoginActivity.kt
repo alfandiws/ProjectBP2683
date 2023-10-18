@@ -15,17 +15,17 @@ class LoginActivity : AppCompatActivity() {
         val txtUsername:EditText = findViewById(R.id.editTextUsername)
         val txtPassword:EditText = findViewById(R.id.editTextPassword)
         val LogModel = LoginModel()
-        btnLogin.setOnClickListener(){
-            LogModel.username = txtUsername.text.toString()
-            LogModel.password = txtPassword.text.toString()
+        btnLogin.setOnClickListener{
+//            LogModel.username = txtUsername.text.toString()
+//            LogModel.password = txtPassword.text.toString()
 
-            if(LogModel.LoginCek() == true){
-                val intenHome = Intent(this,HomeActivity::class.java)
-                startActivity(intenHome)
-            }else{
-                Toast.makeText(this,"Login gagal, cek username dab password",
-                    Toast.LENGTH_SHORT).show()
-            }
+//            if(LogModel.LoginCek() == true){
+                val Home = Intent(this,HomeActivity::class.java)
+                startActivity(Home)
+//            }else{
+//                Toast.makeText(this,"Login gagal, cek username dab password",
+//                    Toast.LENGTH_SHORT).show()
+//            }
         }
     }
 }

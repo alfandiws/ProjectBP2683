@@ -14,6 +14,7 @@ class HomeActivity : AppCompatActivity() {
 
         val btnBookKidActivity:Button = findViewById(R.id.buttonMenu1)
         val rvBuku:RecyclerView = findViewById(R.id.recylerViewBuku)
+        val btnSpace:Button = findViewById(R.id.buttonMenu3)
         //set layout manager di RecylerView
         rvBuku.layoutManager = LinearLayoutManager(this)
         //list data
@@ -28,6 +29,9 @@ class HomeActivity : AppCompatActivity() {
             val intentBookkid=Intent(this,BookKidActivity::class.java)
             startActivity(intentBookkid)
         }
-
+        btnSpace.setOnClickListener{
+            val intentSpace = Intent (this,ResponsiActivity::class.java)
+            startActivity(intentSpace)
+        }
     }
 }
