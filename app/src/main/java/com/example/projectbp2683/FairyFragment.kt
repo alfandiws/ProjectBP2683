@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Adapter
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
@@ -60,11 +61,19 @@ class FairyFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val BukuModel = DaftarBuku.getBukuModel()
-        val BookAdapter = Adapter(BukuModel)
 
+        // Inisialisasi data buku Anda (DaftarBuku.getBukuModel() harus mengembalikan daftar buku)
+        val bukuModel = DaftarBuku.getBukuModel()
+
+        // Inisialisasi Adapter dengan data buku
+        val bookAdapter = BookAdapter(bukuModel)
+
+        // Inisialisasi RecyclerView
         val recyclerView: RecyclerView = view.findViewById(R.id.recycleView)
-        recyclerView.layoutManager =
-        recyclerView.adapter = BookAdapter
+        recyclerView.layoutManager = LinearLayoutManager(requireContext()) // Menggunakan LinearLayoutManager sebagai contoh
+
+        // Mengatur adapter untuk RecyclerView
+        recyclerView.adapter = bookAdapter
     }
+
 }
