@@ -34,4 +34,5 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intentSpace)
         }
     }
+
 }

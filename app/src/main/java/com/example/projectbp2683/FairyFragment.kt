@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Adapter
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -56,4 +59,21 @@ class FairyFragment : Fragment() {
                 }
             }
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Inisialisasi data buku Anda (DaftarBuku.getBukuModel() harus mengembalikan daftar buku)
+        val bukuModel = DaftarBuku.getBukuModel()
+
+        // Inisialisasi Adapter dengan data buku
+        val bookAdapter = BookAdapter(bukuModel)
+
+        // Inisialisasi RecyclerView
+        val recyclerView: RecyclerView = view.findViewById(R.id.recycleView)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext()) // Menggunakan LinearLayoutManager sebagai contoh
+
+        // Mengatur adapter untuk RecyclerView
+        recyclerView.adapter = bookAdapter
+    }
+
 }
